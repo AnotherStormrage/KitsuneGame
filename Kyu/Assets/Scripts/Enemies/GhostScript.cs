@@ -82,6 +82,7 @@ public class GhostScript : MonoBehaviour {
                         print("HAS PERDIDO UNA VIDA");
                         player.GetComponent<KyuHealth>().TakeDamage(10);
                         Destroy(this.gameObject);
+                        counterEnemies.counterEnemy--;
                     }
                     else //if not collides with the player
                     {
@@ -115,6 +116,7 @@ public class GhostScript : MonoBehaviour {
                         print("HAS PERDIDO UNA VIDA");
                         player.GetComponentInChildren<KyuHealth>().TakeDamage(5);
                         Destroy(this.gameObject);
+                        counterEnemies.counterEnemy--;
                     }
                 }
                 break;
