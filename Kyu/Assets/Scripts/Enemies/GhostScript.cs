@@ -133,6 +133,7 @@ public class GhostScript : MonoBehaviour {
                 print("muerto");
                 nav.enabled = false;
                 Destroy(this.gameObject);
+                counterEnemies.counterEnemy--;
                 //Destroy(this.transform.parent.gameObject);
                 break;
         }

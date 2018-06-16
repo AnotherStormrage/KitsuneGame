@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour {
 
 
     public enum SpawnState { SPAWNING, WAITING, COUNTING};
+    
 
 
     [System.Serializable]
@@ -31,6 +33,7 @@ public class WaveSpawner : MonoBehaviour {
     GameObject aux;
 
 
+
     void Start () {
         waveCountdown = timeBetweenwaves;
         if (spawnPoints.Length == 0)
@@ -40,6 +43,8 @@ public class WaveSpawner : MonoBehaviour {
 
         print(GameObject.FindGameObjectsWithTag("Enemy").Length);
        aux = GameObject.FindGameObjectWithTag("Enemy");
+
+       
         //print(aux.transform.parent.gameObject.name);
        // Destroy(aux);
     }
@@ -138,5 +143,6 @@ public class WaveSpawner : MonoBehaviour {
 
         Transform _sp =  spawnPoints[Random.Range(0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation);
+        counterEnemies.counterEnemy++;
     }
 }
