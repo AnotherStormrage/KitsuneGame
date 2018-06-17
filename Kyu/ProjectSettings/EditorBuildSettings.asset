@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 851c16828d54fb843a966684c54c3c3d
   - enabled: 1
-    path: Assets/Scenes/NestorScene.unity
-    guid: b21b3a5998eaa9e4fa6a776e97053d2d
+    path: Assets/Scenes/FirstLevel.unity
+    guid: 3fc36a9b69362f94d844ab480f92a38c

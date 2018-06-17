@@ -17,6 +17,8 @@ public class counterEnemies : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        enemyText.text = counterEnemy + " Onis alive";		
+        if (!KyuHealth.isDead){
+            enemyText.text = counterEnemy + " Onis alive";
+        }           		
 	}
 }
